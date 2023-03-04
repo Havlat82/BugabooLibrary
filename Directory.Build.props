@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+ <!-- Pro NuGet, aby při balení našel dočasný soubory, jinak se balíček nevytvoří.
+			MUSÍ BÝT ve stejném adresáři jako soubor řešení. -->
+ <PropertyGroup>
+   <MSBuildProjectExtensionsPath>..\..\Temp\AnyCPU\Debug\$(MSBuildProjectName)\</MSBuildProjectExtensionsPath>
+ </PropertyGroup>
+</Project>
