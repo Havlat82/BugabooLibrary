@@ -1,9 +1,83 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <BaseOutputPath>C:\R\BugabooLibrary\build</BaseOutputPath>
+    <BaseIntermediateOutputPath>C:\R\BugabooLibrary\artifacts</BaseIntermediateOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <Title>Havlat82.BugabooLibrary.Console</Title>
+    <Authors>Petr Havlát</Authors>
+    <Description>My favourite console utilities</Description>
+    <Copyright>Copyright (c) 2023</Copyright>
+    <PackageProjectUrl>https://github.com/Havlat82/BugabooLibrary</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Havlat82/BugabooLibrary</RepositoryUrl>
+    <PackageTags>Console; C#</PackageTags>
+    <PackageOutputPath>C:\R\BugabooLibrary\publish</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <DocumentationFile>C:\R\BugabooLibrary\docs\Havlat82.BugabooLibrary.Console.xml</DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Target Name="SpicNSpan" AfterTargets="Build">
+    <!-- common vars https://msdn.microsoft.com/en-us/library/c02as0cs.aspx?f=255&MSPPError=-2147217396 -->
+    <RemoveDir Directories="$(ProjectDir)bin" />
+    <!-- bin -->
+    <RemoveDir Directories="$(ProjectDir)obj" />
+    <!-- obj -->
+  </Target>
+
+  <Target Name="SpicNSpan" AfterTargets="Clean">
+    <!-- common vars https://msdn.microsoft.com/en-us/library/c02as0cs.aspx?f=255&MSPPError=-2147217396 -->
+    <RemoveDir Directories="$(ProjectDir)bin" />
+    <!-- bin -->
+    <RemoveDir Directories="$(ProjectDir)obj" />
+    <!-- obj -->
+  </Target>
+
+  <Target Name="SpicNSpan" AfterTargets="Pack">
+    <RemoveDir Directories="$(ProjectDir)obj" />
+    <!-- obj -->
+  </Target>
 
 </Project>
