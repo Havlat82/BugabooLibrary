@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+ <PropertyGroup>
+   <MSBuildProjectExtensionsPath>$(SolutionDir)artifacts\$(MSBuildProjectName)\$(Configuration)</MSBuildProjectExtensionsPath>
+   <!--<MSBuildProjectExtensionsPath>..\..\artifacts\$(MSBuildProjectName)\$(Configuration)</MSBuildProjectExtensionsPath>-->
+ </PropertyGroup>
+</Project>
