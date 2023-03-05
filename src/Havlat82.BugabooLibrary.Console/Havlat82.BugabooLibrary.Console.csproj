@@ -5,31 +5,31 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationIcon>logo.ico</ApplicationIcon>
-    <BaseOutputPath>C:\R\BugabooLibrary\build</BaseOutputPath>
-    <BaseIntermediateOutputPath>C:\R\BugabooLibrary\artifacts</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)build\$(AssemblyName)</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)artifacts\$(AssemblyName)</BaseIntermediateOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
-    <Title>Havlat82.BugabooLibrary.Console</Title>
+    <Title>$(AssemblyName)</Title>
     <Authors>Petr Havlát</Authors>
     <Description>My favourite console utilities</Description>
-    <Copyright>Copyright (c) 2023</Copyright>
+    <Copyright>2023</Copyright>
     <PackageProjectUrl>https://github.com/Havlat82/BugabooLibrary</PackageProjectUrl>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Havlat82/BugabooLibrary</RepositoryUrl>
     <PackageTags>Console; C#</PackageTags>
-    <PackageOutputPath>C:\R\BugabooLibrary\publish</PackageOutputPath>
+    <PackageOutputPath>$(SolutionDir)publish</PackageOutputPath>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-    <DocumentationFile>C:\R\BugabooLibrary\docs\Havlat82.BugabooLibrary.Console.xml</DocumentationFile>
+    <DocumentationFile>$(SolutionDir)docs\$(AssemblyName).xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   
   <PropertyGroup>
-    <RestorePackagesPath>C:\R\BugabooLibrary\packages</RestorePackagesPath>
+    <RestorePackagesPath>$(SolutionDir)packages</RestorePackagesPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
