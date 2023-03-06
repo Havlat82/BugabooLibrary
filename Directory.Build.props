@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Importuje se před souborem Microsoft.Common.props, kde jsou uloženy defaultní hodnoty
+     a přepisuje je. Měl by být v adresáři se souborem řešení (s příponou .sln).
+     
+     Pro více informací:
+     ===================
+     https://stackoverflow.com/questions/75645721/the-value-of-the-property-baseintermediateoutputpath-was-modified-after-it-was?noredirect=1#comment133455317_75645721
+     https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2022
+     https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2022
+     
+     Příklad:
+     https://github.com/CoreWCF/CoreWCF/blob/main/Directory.Build.props -->
+
 <Project>
  <PropertyGroup>
-   <MSBuildProjectExtensionsPath>$(SolutionDir)artifacts\$(MSBuildProjectName)\$(Configuration)</MSBuildProjectExtensionsPath>
-   <!--<MSBuildProjectExtensionsPath>..\..\artifacts\$(MSBuildProjectName)\$(Configuration)</MSBuildProjectExtensionsPath>-->
+   <!-- Přepisuje výchozí cestu ke složce, kam se ukládají přechodné soubory.
+        Jsou to v podstatě fragmenty, které budou spojeny, aby vytvořily konečný spustitelný soubor -->
+   <MSBuildProjectExtensionsPath>$(SolutionDir)artifacts\$(MSBuildProjectName)\$(Configuration)</MSBuildProjectExtensionsPath>   
  </PropertyGroup>
 </Project>
