@@ -23,10 +23,6 @@
     <Content Include="logo.ico" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Console\" />
-  </ItemGroup>
-
   <!-- Cesta ke složce, kam se budou obnovovat NuGet balíčky -->
   <PropertyGroup>
     <RestorePackagesPath>$(SolutionDir)packages</RestorePackagesPath>
