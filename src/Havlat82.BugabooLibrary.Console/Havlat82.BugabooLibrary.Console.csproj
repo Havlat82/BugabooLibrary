@@ -6,7 +6,6 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>logo.ico</ApplicationIcon>
     <BaseOutputPath>$(SolutionDir)build\$(AssemblyName)</BaseOutputPath>
-    <BaseIntermediateOutputPath>$(SolutionDir)artifacts\$(AssemblyName)</BaseIntermediateOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
     <Title>$(AssemblyName)</Title>
