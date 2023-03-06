@@ -1,4 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Soubor C#.NET projektu
+  
+       Více informací zde:
+       ===================
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2022
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-items?view=vs-2022
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-item-metadata?view=vs-2022
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-reserved-and-well-known-properties?view=vs-2022
+       https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-properties?source=recommendations&view=vs-2022
+       https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-conditions?source=recommendations&view=vs-2022 -->
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -26,7 +37,8 @@
     <DocumentationFile>$(SolutionDir)docs\$(AssemblyName).xml</DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
-  
+
+  <!-- Cesta ke složce, kam se budou obnovovat NuGet balíčky -->
   <PropertyGroup>
     <RestorePackagesPath>$(SolutionDir)packages</RestorePackagesPath>
   </PropertyGroup>
@@ -62,6 +74,7 @@
     </None>
   </ItemGroup>
 
+  <!-- Po sestavení solušny se vymažou následující složky -->
   <Target Name="SpicNSpan" AfterTargets="Build">
     <!-- common vars https://msdn.microsoft.com/en-us/library/c02as0cs.aspx?f=255&MSPPError=-2147217396 -->
     <RemoveDir Directories="$(ProjectDir)bin" />
@@ -70,6 +83,7 @@
     <!-- obj -->
   </Target>
 
+  <!-- Po čištění solušny se vymažou následující složky -->
   <Target Name="SpicNSpan" AfterTargets="Clean">
     <!-- common vars https://msdn.microsoft.com/en-us/library/c02as0cs.aspx?f=255&MSPPError=-2147217396 -->
     <RemoveDir Directories="$(ProjectDir)bin" />
@@ -78,6 +92,7 @@
     <!-- obj -->
   </Target>
 
+  <!-- Po balení solušny se vymažou následující složky -->
   <Target Name="SpicNSpan" AfterTargets="Pack">
     <RemoveDir Directories="$(ProjectDir)obj" />
     <!-- obj -->
