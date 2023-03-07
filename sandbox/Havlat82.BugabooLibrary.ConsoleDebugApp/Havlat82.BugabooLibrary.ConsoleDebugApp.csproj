@@ -21,6 +21,11 @@
     <Content Include="logo.ico" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Figgle" Version="0.5.1" />
+    <PackageReference Include="Pastel" Version="4.1.0" />
+  </ItemGroup>
+
   <!-- Cesta ke složce, kam se budou obnovovat NuGet balíčky -->
   <PropertyGroup>
     <RestorePackagesPath>$(SolutionDir)packages</RestorePackagesPath>
