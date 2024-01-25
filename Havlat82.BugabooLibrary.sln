@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Havlat82.BugabooLibrary.Console", "src\Havlat82.BugabooLibrary.Console\Havlat82.BugabooLibrary.Console.csproj", "{3874E5A6-9CEA-423A-9347-D392FD770C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havlat82.BugabooLibrary.ConsoleDebugApp", "sandbox\Havlat82.BugabooLibrary.ConsoleDebugApp\Havlat82.BugabooLibrary.ConsoleDebugApp.csproj", "{BED854C9-CE28-4CF2-801A-2998793F8F75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Havlat82.BugabooLibrary.ConsoleDebugApp", "sandbox\Havlat82.BugabooLibrary.ConsoleDebugApp\Havlat82.BugabooLibrary.ConsoleDebugApp.csproj", "{BED854C9-CE28-4CF2-801A-2998793F8F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BugabooLibrary.Benchmarks", "benchmarks\BugabooLibrary.Benchmarks\BugabooLibrary.Benchmarks.csproj", "{D32BCA6F-3E88-458E-B74B-2C8F7E0BDA93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BED854C9-CE28-4CF2-801A-2998793F8F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BED854C9-CE28-4CF2-801A-2998793F8F75}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{BED854C9-CE28-4CF2-801A-2998793F8F75}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D32BCA6F-3E88-458E-B74B-2C8F7E0BDA93}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{D32BCA6F-3E88-458E-B74B-2C8F7E0BDA93}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{D32BCA6F-3E88-458E-B74B-2C8F7E0BDA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32BCA6F-3E88-458E-B74B-2C8F7E0BDA93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
